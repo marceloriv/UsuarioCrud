@@ -1,5 +1,5 @@
 package com.example.usuariocrud.model;
 
-public class GerenteVenta {
+public class GerenteVenta extends Usuario {
 
 }

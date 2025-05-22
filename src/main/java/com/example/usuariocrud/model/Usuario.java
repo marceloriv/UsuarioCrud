@@ -33,4 +33,13 @@ public class Usuario {
 
     private LocalDateTime fechaCreacion;
 
+
+    /* 
+     * nombre:
+     * apellidos:
+     * correo:
+     * telefono:
+     * direccion:
+     * constraseña:
+     */
 }

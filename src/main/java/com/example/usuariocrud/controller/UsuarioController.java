@@ -21,19 +21,19 @@ import com.example.usuariocrud.service.UsuarioService;
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/usuarios")
+@RequestMapping("api/v1/usuarios")
 public class UsuarioController {
 
     @Autowired
     private UsuarioService usuarioService;
 
-    @PostMapping("/nuevo")
+    @PostMapping
     public ResponseEntity<ApiRespuestaDto> registrarUsuario(@Valid @RequestBody RegistracionUsuarioDto registracionUsuarioDto)
             throws UsuarioYaExisteException, ErrorLogicaServicioUsuarioException {
         return usuarioService.registrarUsuario(registracionUsuarioDto);
     }
 
-    @GetMapping("/obtener/todos")
+    @GetMapping
     public ResponseEntity<ApiRespuestaDto> obtenerTodosLosUsuarios()
             throws ErrorLogicaServicioUsuarioException {
         return usuarioService.obtenerTodosLosUsuarios();

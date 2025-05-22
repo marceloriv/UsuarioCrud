@@ -40,6 +40,14 @@ public class UsuarioServiceImpl implements UsuarioService {
                         "Registro fallido: Ya existe un usuario con el nombre " + nuevosDetallesUsuario.getUsuario());
             }
 
+            /* 
+             * El medotodo
+             *repositorioUsuario.save(nuevoUsuario); se deberia llamar desde el repositorio
+                * y no desde el servicio.
+                * El servicio solo debe contener la logica de negocio y no la persistencia.
+                * La persistencia se debe manejar en el repositorio.
+
+             */
             // resto del código sin cambios
             Usuario nuevoUsuario = new Usuario();
             nuevoUsuario.setUsuario(nuevosDetallesUsuario.getUsuario());
