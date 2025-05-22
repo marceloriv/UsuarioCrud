@@ -13,11 +13,12 @@ public interface RepositorioUsuario extends JpaRepository<Usuario, Long> {
 
     Usuario findByEmail(String email);
 
-    Usuario findByUsuario(String nombreUsuario);
+    Usuario findByUsuario(String nombre);
 
     // Para buscar entre fechas
     List<Usuario> findByFechaCreacionBetween(LocalDateTime fechaInicio, LocalDateTime fechaFin);
 
     // Para ordenar por fecha descendente
     List<Usuario> findAllByOrderByFechaCreacionDesc();
+
 }
